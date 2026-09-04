@@ -1,0 +1,29 @@
+name: RaceDay CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  # -------------------------------------------------------------
+  # Job 1: Validate Documentation & Project Artifacts
+  # -------------------------------------------------------------
+  lint-docs:
+    name: Verify Project Artifacts & Docs
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Verify Required Docs Exist
+        run: |
+          echo "Checking required submission files..."
+          test -f README.md || (echo "Missing README.md" && exit 1)
+          test -f docs/RaceDay_Database.sql || (echo "Missing RaceDay_Database.sql in /docs" && exit 1)
+          test -f docs/api-endpoint-plan.md || (echo "Missing api-endpoint-plan.md in /docs" && exit 1)
+          echo "All core documentation files present."
+
+  
