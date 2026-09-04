@@ -1,4 +1,4 @@
-name: RaceDay CI/CD Pipeline
+name: PROG_Part1 CI/CD Pipeline
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
         run: |
           echo "Checking required submission files..."
           test -f README.md || (echo "Missing README.md" && exit 1)
-          test -f docs/RaceDay_Database.sql || (echo "Missing RaceDay_Database.sql in /docs" && exit 1)
+          test -f docs/PROG_Database.sql || (echo "Missing PROG_Database.sql in /docs" && exit 1)
           test -f docs/api-endpoint-plan.md || (echo "Missing api-endpoint-plan.md in /docs" && exit 1)
           echo "All core documentation files present."
 
