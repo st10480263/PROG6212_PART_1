@@ -23,7 +23,7 @@ The database schema is fully normalised and comprises **six (6) core relational 
 6. **`Results`**: Stores finish times, finishing ranks, and completion statuses linked directly to individual participant enrolments.
 
 ### Entity Relationship Diagram (ERD)
-* The official diagram is located in the repository under: [`/docs/PROG_ERD.png`](./docs/PROG_ERD.png) (or `/docs/PROG_ERD.pdf`).
+* The official diagram is located in the repository under: [`/docs/PROG_ERD.jpeg`](./docs/PROG_ERD.jpeg) (or `/docs/PROG_ERD.pdf`).
 
 ---
 
