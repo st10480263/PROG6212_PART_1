@@ -9,6 +9,11 @@ CREATE TABLE Venue(
 	Province VARCHAR(100) NOT NULL
 );
 
+INSERT INTO Venue (VenueID, VenueName, City, Province) VALUES
+	(1, 'FNB Stadium', 'Johannesburg', 'Gauteng'),
+	(2, 'Grand Parade', 'Cape Town', 'Western Cape'),
+	(3, 'North Beach Promenade', 'Durban', 'KwaZulu-Natal');
+
 CREATE TABLE Users(
 	UserID INT NOT NULL PRIMARY KEY,
 	FullName VARCHAR(100) NOT NULL,
@@ -16,6 +21,12 @@ CREATE TABLE Users(
 	Role VARCHAR(100) NOT NULL,
 	PhoneNumber VARCHAR(100) NOT NULL
 );
+
+INSERT INTO Users (UserID, FullName, Email, Role, PhoneNumber) VALUES
+	(1, 'Sipho Ndlovu', 'sipho.organizer@raceday.co.za', 'Organiser', '0821234567'),
+	(2, 'Karen van der Merwe', 'karen.vdm@caperaces.co.za', 'Organiser', '0839876543'),
+	(3, 'Tebogo Moloto', 'tebogo.dev@gmail.com', 'Participant', '0712345678'),
+	(4, 'Sbusiso Khoza', 'sbu.khoza@gmail.com', 'Participant', '0798765432');
 
 CREATE TABLE Events(
 	EventID INT NOT NULL PRIMARY KEY,
