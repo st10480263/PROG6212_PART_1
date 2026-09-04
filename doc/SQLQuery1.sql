@@ -37,6 +37,11 @@ CREATE TABLE Events(
 	EventDate VARCHAR(100) NOT NULL
 	);
 
+INSERT INTO Events (EventID, OrganiserID, VenueID, EventName, EventType, EventDate) VALUES
+	(1, 1, 1, 'Soweto Marathon 2026', 'Running', '2026-11-01'),
+	(2, 2, 2, 'Cape Town Cycle Tour 2027', 'Cycling', '2027-03-14'),
+	(3, 1, 3, 'Durban Coastal Fun Walk', 'Walking', '2026-10-10');
+
 CREATE TABLE Categories(
 	CategoryID INT NOT NULL PRIMARY KEY,
 	EventID INT NOT NULL FOREIGN KEY REFERENCES Events(EventID),
@@ -44,6 +49,16 @@ CREATE TABLE Categories(
 	Distance VARCHAR(100) NOT NULL,
 	EntryFee VARCHAR(100) NOT NULL
 );
+
+INSERT INTO Categories (CategoryID, EventID, CategoryName, Distance, EntryFee) VALUES
+	(1, 1, '42.2km Full Marathon', '42.2 km', 'R380.00'),
+	(2, 1, '21.1km Half Marathon', '21.1 km', 'R250.00'),
+	(3, 1, '10km Road Race', '10.0 km', 'R150.00'),
+	(4, 2, '109km Classic Tour', '109.0 km', 'R650.00'),
+	(5, 2, '42km Short Route', '42.0 km', 'R320.00'),
+	(6, 3, '5km Family Fun Walk', '5.0 km', 'R50.00'),
+	(7, 3, '10km Power Walk', '10.0 km', 'R90.00');
+
 
 CREATE TABLE Enrolments(
 	EnrolmentID INT NOT NULL PRIMARY KEY,
