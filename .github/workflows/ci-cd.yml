@@ -22,8 +22,8 @@ jobs:
         run: |
           echo "Checking required submission files..."
           test -f README.md || (echo "Missing README.md" && exit 1)
-          test -f docs/SQLQuery1.sql || (echo "Missing SQLQuery.sql in /docs" && exit 1)
-          test -f docs/api-endpoint-plan.md || (echo "Missing api-endpoint-plan.md in /docs" && exit 1)
+          test -f docs/SQLQuery1.sql || (echo "Missing SQLQuery1.sql in /docs" && exit 1)
+          test -f docs/API-Endpoint-Plan.docx || (echo "Missing API-Endpoint-Plan.docx in /docs" && exit 1)
           echo "All core documentation files present."
 
   
