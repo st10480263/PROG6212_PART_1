@@ -67,6 +67,11 @@ CREATE TABLE Enrolments(
 	RegistrationDate DATETIME NOT NULL
 );
 
+INSERT INTO Enrolments (EnrolmentID, ParticipantID, CategoryID, RegistrationDate) VALUES
+	(1, 3, 2, '2026-09-01 10:30:00'),
+	(2, 4, 4, '2026-09-02 14:15:00'),
+	(3, 3, 6, '2026-09-03 09:00:00');
+
 CREATE TABLE Results(
 	ResultID INT NOT NULL PRIMARY KEY,
 	EnrolmentID INT NOT NULL FOREIGN KEY REFERENCES Enrolments(EnrolmentID),
@@ -74,5 +79,9 @@ CREATE TABLE Results(
 	Position VARCHAR(100) NOT NULL,
 	Status VARCHAR(100) NOT NULL
 );
+
+INSERT INTO Results (ResultID, EnrolmentID, FinishTime, Position, Status) VALUES
+	(1, 1, '01:48:22', '42', 'Finished'),
+	(2, 2, '03:12:45', '118', 'Finished');
 
 
