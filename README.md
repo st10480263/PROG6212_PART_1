@@ -56,3 +56,6 @@ The database script creates the `Prog_Database` database, establishes all relati
 
 ### Prerequisites
 * Microsoft SQL Server Management Studio (SSMS) 19 or later / Azure Data Studio.
+
+* <img width="1132" height="394" alt="Screenshot 2026-09-04 214350" src="https://github.com/user-attachments/assets/a73b39b9-b6ff-4243-a6f4-5af5997bbadf" />
+
