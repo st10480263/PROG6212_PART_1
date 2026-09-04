@@ -2,6 +2,14 @@ CREATE DATABASE Prog_Database
 
 USE Prog_Database
 
+-- Just incase of any problems arising from created tables
+--DROP TABLE IF EXISTS Results;
+--DROP TABLE IF EXISTS Enrolments;
+--DROP TABLE IF EXISTS Categories;
+--DROP TABLE IF EXISTS Events;
+--DROP TABLE IF EXISTS Users;
+--DROP TABLE IF EXISTS Venue;
+
 CREATE TABLE Venue( 
 	VenueID INT NOT NULL PRIMARY KEY,
 	VenueName VARCHAR(100) NOT NULL,
